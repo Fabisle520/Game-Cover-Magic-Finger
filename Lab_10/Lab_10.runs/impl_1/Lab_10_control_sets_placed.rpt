@@ -1,0 +1,96 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Jul 30 16:25:59 2020
+| Host         : LAPTOP-O58ITAFF running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Lab_10_control_sets_placed.rpt
+| Design       : Lab_10
+| Device       : xc7s15
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    25 |
+| Unused register locations in slices containing registers |   114 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            2 |
+|      2 |            1 |
+|      4 |            1 |
+|      6 |            1 |
+|      8 |            1 |
+|     10 |            1 |
+|     12 |           10 |
+|    16+ |            8 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             137 |           55 |
+| No           | No                    | Yes                    |               6 |            2 |
+| No           | Yes                   | No                     |              80 |           30 |
+| Yes          | No                    | No                     |             163 |           58 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             140 |           54 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+-----------------------------------+-------------------------------------------------------------------------------+------------------+----------------+
+|      Clock Signal     |           Enable Signal           |                                Set/Reset Signal                               | Slice Load Count | Bel Load Count |
++-----------------------+-----------------------------------+-------------------------------------------------------------------------------+------------------+----------------+
+|  clk_10/inst/clk_out1 | Driver_HDMI0/Set_X_reg[8]_1[0]    |                                                                               |                1 |              1 |
+|  clk_10/inst/clk_out1 | Driver_HDMI0/Set_Y_reg[5]_0[0]    |                                                                               |                1 |              1 |
+|  clk_10/inst/clk_out1 |                                   | rgb2dvi/U0/ClockGenInternal.ClockGenX/in0                                     |                1 |              2 |
+|  clk_10/inst/clk_out1 |                                   | rgb2dvi/U0/ClockGenInternal.ClockGenX/LockLostReset/SyncAsyncx/oSyncStages[1] |                1 |              4 |
+|  clk_10/inst/clk_out1 |                                   | Video_Generator0/num1[32]_i_1_n_0                                             |                3 |              6 |
+|  clk_10/inst/clk_out1 | Driver_HDMI0/right1_reg[0]        | Driver_HDMI0/flag_reg                                                         |                4 |              8 |
+|  clk_10/inst/clk_out1 |                                   | rgb2dvi/U0/DataEncoders[0].DataEncoder/pDataOutRaw[9]_i_1__1_n_0              |                3 |             10 |
+|  clk_10/inst/clk_out1 |                                   | Control/num[26]_i_1_n_0                                                       |                2 |             12 |
+|  clk_10/inst/clk_out1 | Driver_HDMI0/right2_reg[0][0]     |                                                                               |                5 |             12 |
+|  clk_10/inst/clk_out1 | Driver_HDMI0/right3_reg[0][0]     |                                                                               |                5 |             12 |
+|  clk_10/inst/clk_out1 | Driver_HDMI0/flag_reg_0[0]        |                                                                               |                3 |             12 |
+|  clk_10/inst/clk_out1 | Driver_HDMI0/left3_reg[0][0]      |                                                                               |                3 |             12 |
+|  clk_10/inst/clk_out1 | Driver_HDMI0/left2_reg[0][0]      |                                                                               |                3 |             12 |
+|  clk_10/inst/clk_out1 | Driver_HDMI0/Set_X0_carry__0_n_2  |                                                                               |                4 |             12 |
+|  clk_10/inst/clk_out1 | Driver_HDMI0/VSync_Cnt0           |                                                                               |                3 |             12 |
+|  clk_10/inst/clk_out1 | Driver_HDMI0/Set_Y0_carry__0_n_2  |                                                                               |                3 |             12 |
+|  clk_10/inst/clk_out1 | Driver_HDMI0/E[0]                 |                                                                               |                4 |             12 |
+|  clk_10/inst/clk_out1 |                                   | Control/num[32]_i_1_n_0                                                       |                6 |             20 |
+|  clk_10/inst/clk_out1 |                                   | rgb2dvi/U0/DataEncoders[0].DataEncoder/SR[0]                                  |               16 |             32 |
+|  clk_10/inst/clk_out1 | Video_Generator0/cnt              | Video_Generator0/num1[32]_i_1_n_0                                             |                9 |             33 |
+|  clk_10/inst/clk_out1 | Video_Generator0/num1[32]_i_2_n_0 | Video_Generator0/num1[32]_i_1_n_0                                             |               10 |             33 |
+|  clk_10/inst/clk_out1 | Video_Generator0/num2[0]_i_1_n_0  | Video_Generator0/num1[32]_i_1_n_0                                             |               13 |             33 |
+|  clk_10/inst/clk_out1 | Video_Generator0/num3             | Video_Generator0/num1[32]_i_1_n_0                                             |               18 |             33 |
+|  clk_10/inst/clk_out1 | Video_Generator0/a[16]_i_1_n_0    |                                                                               |               23 |             53 |
+|  clk_10/inst/clk_out1 |                                   |                                                                               |               55 |            137 |
++-----------------------+-----------------------------------+-------------------------------------------------------------------------------+------------------+----------------+
+
+

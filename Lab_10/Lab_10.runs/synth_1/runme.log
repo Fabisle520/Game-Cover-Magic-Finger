@@ -1,0 +1,693 @@
+
+*** Running vivado
+    with args -log Lab_10.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Lab_10.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source Lab_10.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/summer_homework/FPGA-IP/RGB2Stream-IP'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/summer_homework/IP_Core/HDMI-IP/IP'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/³ÂË¼çù/Documents/Tencent Files/215008496/FileRecv/Experiment-of-SEA/Experiment-of-SEA/IP_Core/HDMI-IP/IP/RGB2DVI_IP'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/summer_homework/IP_Core/Frequency-Divider-IP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.3/data/ip'.
+Command: synth_design -top Lab_10 -part xc7s15ftgb196-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13408 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 424.109 ; gain = 104.090
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Lab_10' [E:/summer_homework/Lab_10/Lab_10.srcs/sources_1/new/Lab_10.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [E:/summer_homework/Lab_10/Lab_10.runs/synth_1/.Xil/Vivado-17792-LAPTOP-O58ITAFF/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [E:/summer_homework/Lab_10/Lab_10.runs/synth_1/.Xil/Vivado-17792-LAPTOP-O58ITAFF/realtime/clk_wiz_0_stub.v:5]
+WARNING: [Synth 8-350] instance 'clk_10' of module 'clk_wiz_0' requires 4 connections, but only 2 given [E:/summer_homework/Lab_10/Lab_10.srcs/sources_1/new/Lab_10.v:40]
+INFO: [Synth 8-6157] synthesizing module 'rgb2dvi_0' [E:/summer_homework/Lab_10/Lab_10.runs/synth_1/.Xil/Vivado-17792-LAPTOP-O58ITAFF/realtime/rgb2dvi_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rgb2dvi_0' (2#1) [E:/summer_homework/Lab_10/Lab_10.runs/synth_1/.Xil/Vivado-17792-LAPTOP-O58ITAFF/realtime/rgb2dvi_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'control' [E:/summer_homework/Lab_10/Lab_10.srcs/sources_1/new/control.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'control' (3#1) [E:/summer_homework/Lab_10/Lab_10.srcs/sources_1/new/control.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Driver_HDMI' [E:/summer_homework/Lab_10/Lab_10.srcs/sources_1/new/Driver_HDMI.v:24]
+	Parameter H_ACTIVE_1280_720 bound to: 16'b0000010100000000 
+	Parameter H_FP_1280_720 bound to: 16'b0000000001101110 
+	Parameter H_SYNC_1280_720 bound to: 16'b0000000000101000 
+	Parameter H_BP_1280_720 bound to: 16'b0000000011011100 
+	Parameter V_ACTIVE_1280_720 bound to: 16'b0000001011010000 
+	Parameter V_FP_1280_720 bound to: 16'b0000000000000101 
+	Parameter V_SYNC_1280_720 bound to: 16'b0000000000000101 
+	Parameter V_BP_1280_720 bound to: 16'b0000000000010100 
+	Parameter H_TOTAL_1280_720 bound to: 16'b0000011001110010 
+	Parameter V_TOTAL_1280_720 bound to: 16'b0000001011101110 
+	Parameter H_ACTIVE_1920_1080 bound to: 16'b0000011110000000 
+	Parameter H_FP_1920_1080 bound to: 16'b0000000001011000 
+	Parameter H_SYNC_1920_1080 bound to: 16'b0000000000101100 
+	Parameter H_BP_1920_1080 bound to: 16'b0000000010010100 
+	Parameter V_ACTIVE_1920_1080 bound to: 16'b0000010000111000 
+	Parameter V_FP_1920_1080 bound to: 16'b0000000000000100 
+	Parameter V_SYNC_1920_1080 bound to: 16'b0000000000000101 
+	Parameter V_BP_1920_1080 bound to: 16'b0000000000100100 
+	Parameter H_TOTAL_1920_1080 bound to: 16'b0000100010011000 
+	Parameter V_TOTAL_1920_1080 bound to: 16'b0000010001100101 
+INFO: [Synth 8-6155] done synthesizing module 'Driver_HDMI' (4#1) [E:/summer_homework/Lab_10/Lab_10.srcs/sources_1/new/Driver_HDMI.v:24]
+INFO: [Synth 8-6157] synthesizing module 'Video_Generator' [E:/summer_homework/Lab_10/Lab_10.srcs/sources_1/new/Video_Generator.v:23]
+INFO: [Synth 8-6157] synthesizing module 'game_R_Rom' [E:/summer_homework/Lab_10/Lab_10.runs/synth_1/.Xil/Vivado-17792-LAPTOP-O58ITAFF/realtime/game_R_Rom_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'game_R_Rom' (5#1) [E:/summer_homework/Lab_10/Lab_10.runs/synth_1/.Xil/Vivado-17792-LAPTOP-O58ITAFF/realtime/game_R_Rom_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'over_R_Rom' [E:/summer_homework/Lab_10/Lab_10.runs/synth_1/.Xil/Vivado-17792-LAPTOP-O58ITAFF/realtime/over_R_Rom_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'over_R_Rom' (6#1) [E:/summer_homework/Lab_10/Lab_10.runs/synth_1/.Xil/Vivado-17792-LAPTOP-O58ITAFF/realtime/over_R_Rom_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Video_Generator' (7#1) [E:/summer_homework/Lab_10/Lab_10.srcs/sources_1/new/Video_Generator.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Lab_10' (8#1) [E:/summer_homework/Lab_10/Lab_10.srcs/sources_1/new/Lab_10.v:23]
+WARNING: [Synth 8-3331] design Video_Generator has unconnected port RGB_VDE
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 482.422 ; gain = 162.402
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 482.422 ; gain = 162.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 482.422 ; gain = 162.402
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7s15ftgb196-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_10'
+Finished Parsing XDC File [e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_10'
+Parsing XDC File [e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc] for cell 'rgb2dvi'
+Finished Parsing XDC File [e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc] for cell 'rgb2dvi'
+Parsing XDC File [e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/game_R_Rom/game_R_Rom/game_R_Rom_in_context.xdc] for cell 'Video_Generator0/R_Rom1'
+Finished Parsing XDC File [e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/game_R_Rom/game_R_Rom/game_R_Rom_in_context.xdc] for cell 'Video_Generator0/R_Rom1'
+Parsing XDC File [e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/over_R_Rom/over_R_Rom/over_R_Rom_in_context.xdc] for cell 'Video_Generator0/R_Rom2'
+Finished Parsing XDC File [e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/over_R_Rom/over_R_Rom/over_R_Rom_in_context.xdc] for cell 'Video_Generator0/R_Rom2'
+Parsing XDC File [E:/summer_homework/Lab_10/Lab_10.srcs/constrs_1/new/system.xdc]
+Finished Parsing XDC File [E:/summer_homework/Lab_10/Lab_10.srcs/constrs_1/new/system.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/summer_homework/Lab_10/Lab_10.srcs/constrs_1/new/system.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Lab_10_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Lab_10_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 793.539 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 793.539 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 793.539 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 793.539 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'Video_Generator0/R_Rom1' at clock pin 'clka' is different from the actual clock period '6.734', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'Video_Generator0/R_Rom2' at clock pin 'clka' is different from the actual clock period '6.734', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 793.539 ; gain = 473.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s15ftgb196-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 793.539 ; gain = 473.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Clk_N. (constraint file  e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Clk_N. (constraint file  e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Clk_P. (constraint file  e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Clk_P. (constraint file  e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Data_N[0]. (constraint file  e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Data_N[0]. (constraint file  e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Data_N[1]. (constraint file  e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Data_N[1]. (constraint file  e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Data_N[2]. (constraint file  e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Data_N[2]. (constraint file  e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Data_P[0]. (constraint file  e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Data_P[0]. (constraint file  e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Data_P[1]. (constraint file  e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Data_P[1]. (constraint file  e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Data_P[2]. (constraint file  e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Data_P[2]. (constraint file  e:/summer_homework/Lab_10/Lab_10.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 16).
+Applied set_property DONT_TOUCH = true for clk_10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for rgb2dvi. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Video_Generator0/R_Rom1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Video_Generator0/R_Rom2. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 793.539 ; gain = 473.520
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "num1" won't be mapped to RAM because address size (33) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "num3" won't be mapped to RAM because address size (33) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "left1" won't be mapped to RAM because address size (33) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "left2" won't be mapped to RAM because address size (33) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "left3" won't be mapped to RAM because address size (33) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "a1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a1y" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a2y" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b1y" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b2y" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c1y" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c2y" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "num1" won't be mapped to RAM because address size (33) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "num3" won't be mapped to RAM because address size (33) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "left1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "left2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "left3" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a1y" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a2y" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b1y" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b2y" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c1y" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c2y" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RGB_Data" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RGB_Data" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RGB_Data" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "set2x" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "set1x" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 793.539 ; gain = 473.520
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     34 Bit       Adders := 3     
+	   2 Input     33 Bit       Adders := 8     
+	   2 Input     32 Bit       Adders := 11    
+	   3 Input     32 Bit       Adders := 1     
+	   3 Input     14 Bit       Adders := 6     
+	   2 Input     14 Bit       Adders := 3     
+	   5 Input     12 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 1     
+	   3 Input      7 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               33 Bit    Registers := 6     
+	               24 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	               14 Bit    Registers := 2     
+	               12 Bit    Registers := 16    
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                2 Bit    Registers := 8     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 12    
+	   3 Input     33 Bit        Muxes := 1     
+	   5 Input     33 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 34    
+	   4 Input     24 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 25    
+	   4 Input     12 Bit        Muxes := 6     
+	   2 Input     11 Bit        Muxes := 1     
+	   3 Input     11 Bit        Muxes := 1     
+	   6 Input     10 Bit        Muxes := 1     
+	   4 Input     10 Bit        Muxes := 1     
+	   7 Input     10 Bit        Muxes := 1     
+	   8 Input     10 Bit        Muxes := 2     
+	   9 Input     10 Bit        Muxes := 1     
+	  10 Input     10 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 5     
+	   3 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 82    
+	   6 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module control 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 1     
++---Registers : 
+	               33 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 5     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 5     
+	   3 Input      2 Bit        Muxes := 2     
+Module Driver_HDMI 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 5     
+	   3 Input     32 Bit       Adders := 1     
+	   5 Input     12 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   3 Input      7 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               12 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+Module Video_Generator 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     34 Bit       Adders := 3     
+	   2 Input     33 Bit       Adders := 7     
+	   2 Input     32 Bit       Adders := 6     
+	   3 Input     14 Bit       Adders := 6     
+	   2 Input     14 Bit       Adders := 3     
+	   2 Input     12 Bit       Adders := 3     
++---Registers : 
+	               33 Bit    Registers := 5     
+	               24 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	               14 Bit    Registers := 2     
+	               12 Bit    Registers := 14    
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                2 Bit    Registers := 6     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 7     
+	   3 Input     33 Bit        Muxes := 1     
+	   5 Input     33 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 34    
+	   4 Input     24 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 24    
+	   4 Input     12 Bit        Muxes := 6     
+	   3 Input     11 Bit        Muxes := 1     
+	   6 Input     10 Bit        Muxes := 1     
+	   4 Input     10 Bit        Muxes := 1     
+	   7 Input     10 Bit        Muxes := 1     
+	   8 Input     10 Bit        Muxes := 2     
+	   9 Input     10 Bit        Muxes := 1     
+	  10 Input     10 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 78    
+	   6 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 20 (col length:20)
+BRAMs: 20 (col length: RAMB18 20 RAMB36 10)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "a1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "num1" won't be mapped to RAM because address size (33) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "a1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c1x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c2x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "num1" won't be mapped to RAM because address size (33) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "RGB_Data" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+DSP Report: Generating DSP Address1_reg, operation Mode is: C+A*(B:0x64).
+DSP Report: register Address1_reg is absorbed into DSP Address1_reg.
+DSP Report: operator Address10 is absorbed into DSP Address1_reg.
+DSP Report: operator Address11 is absorbed into DSP Address1_reg.
+DSP Report: Generating DSP Address0_reg, operation Mode is: C+A*(B:0x64).
+DSP Report: register Address0_reg is absorbed into DSP Address0_reg.
+DSP Report: operator Address00 is absorbed into DSP Address0_reg.
+DSP Report: operator Address01 is absorbed into DSP Address0_reg.
+WARNING: [Synth 8-3331] design Video_Generator has unconnected port RGB_VDE
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/a1x_reg[0]' (FDRE) to 'Video_Generator0/a1x_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/a1x_reg[1]' (FDRE) to 'Video_Generator0/a1x_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/a1x_reg[2]' (FDRE) to 'Video_Generator0/a1x_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/b1x_reg[0]' (FDRE) to 'Video_Generator0/b1x_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/b1x_reg[1]' (FDRE) to 'Video_Generator0/b1x_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/b1x_reg[2]' (FDRE) to 'Video_Generator0/b1x_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c1x_reg[0]' (FDRE) to 'Video_Generator0/c1x_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set1x_reg[0]' (FDE) to 'Video_Generator0/set1x_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c1x_reg[1]' (FDRE) to 'Video_Generator0/c1x_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set1x_reg[1]' (FDE) to 'Video_Generator0/set1x_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c1x_reg[2]' (FDRE) to 'Video_Generator0/c1x_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set1x_reg[2]' (FDE) to 'Video_Generator0/set1x_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/a2x_reg[0]' (FDRE) to 'Video_Generator0/a2x_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/a2x_reg[1]' (FDRE) to 'Video_Generator0/a2x_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/a2x_reg[2]' (FDRE) to 'Video_Generator0/a2x_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/b2x_reg[0]' (FDRE) to 'Video_Generator0/b2x_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/b2x_reg[1]' (FDRE) to 'Video_Generator0/b2x_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/b2x_reg[2]' (FDRE) to 'Video_Generator0/b2x_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c2x_reg[0]' (FDRE) to 'Video_Generator0/c2x_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set2x_reg[0]' (FDE) to 'Video_Generator0/set2x_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c2x_reg[1]' (FDRE) to 'Video_Generator0/c2x_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set2x_reg[1]' (FDE) to 'Video_Generator0/set2x_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c2x_reg[2]' (FDRE) to 'Video_Generator0/c2x_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set2x_reg[2]' (FDE) to 'Video_Generator0/set2x_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Control/left_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Control/right_reg[1] )
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set2y_reg[0]' (FDE) to 'Video_Generator0/set2x_reg[4]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set2y_reg[1]' (FDE) to 'Video_Generator0/set2x_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set2y_reg[2]' (FDE) to 'Video_Generator0/set2x_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set2y_reg[3]' (FDE) to 'Video_Generator0/set2x_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set2y_reg[4]' (FDE) to 'Video_Generator0/set2x_reg[4]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set2y_reg[5]' (FDE) to 'Video_Generator0/set2x_reg[4]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set2y_reg[6]' (FDE) to 'Video_Generator0/set2x_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set2y_reg[7]' (FDE) to 'Video_Generator0/set2x_reg[4]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set2y_reg[8]' (FDE) to 'Video_Generator0/set2x_reg[4]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set2y_reg[9]' (FDE) to 'Video_Generator0/set2x_reg[4]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set2y_reg[10]' (FDE) to 'Video_Generator0/set2x_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set2y_reg[11]' (FDE) to 'Video_Generator0/set2x_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set1y_reg[0]' (FDE) to 'Video_Generator0/set1x_reg[4]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set1y_reg[1]' (FDE) to 'Video_Generator0/set1x_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set1y_reg[2]' (FDE) to 'Video_Generator0/set1x_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set1y_reg[3]' (FDE) to 'Video_Generator0/set1x_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set1y_reg[4]' (FDE) to 'Video_Generator0/set1x_reg[4]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set1y_reg[5]' (FDE) to 'Video_Generator0/set1x_reg[4]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set1y_reg[6]' (FDE) to 'Video_Generator0/set1x_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set1y_reg[7]' (FDE) to 'Video_Generator0/set1x_reg[4]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set1y_reg[8]' (FDE) to 'Video_Generator0/set1x_reg[4]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set1y_reg[9]' (FDE) to 'Video_Generator0/set1x_reg[4]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set1y_reg[10]' (FDE) to 'Video_Generator0/set1x_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set1y_reg[11]' (FDE) to 'Video_Generator0/set1x_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/a1x_reg[3]' (FDRE) to 'Video_Generator0/a1x_reg[8]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/a1x_reg[4]' (FDSE) to 'Video_Generator0/a1x_reg[6]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/a1x_reg[6]' (FDSE) to 'Video_Generator0/a1x_reg[7]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator0/\a1x_reg[7] )
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/a1x_reg[8]' (FDRE) to 'Video_Generator0/a1x_reg[10]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/a1x_reg[10]' (FDRE) to 'Video_Generator0/a1x_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator0/\a1x_reg[11] )
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/b1x_reg[3]' (FDRE) to 'Video_Generator0/b1x_reg[8]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/b1x_reg[4]' (FDSE) to 'Video_Generator0/b1x_reg[6]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/b1x_reg[6]' (FDSE) to 'Video_Generator0/b1x_reg[7]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator0/\b1x_reg[7] )
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/b1x_reg[8]' (FDRE) to 'Video_Generator0/b1x_reg[10]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/b1x_reg[10]' (FDRE) to 'Video_Generator0/b1x_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator0/\b1x_reg[11] )
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c1x_reg[3]' (FDRE) to 'Video_Generator0/c1x_reg[8]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set1x_reg[3]' (FDE) to 'Video_Generator0/set1x_reg[8]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c1x_reg[4]' (FDSE) to 'Video_Generator0/c1x_reg[6]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set1x_reg[4]' (FDE) to 'Video_Generator0/set1x_reg[6]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c1x_reg[6]' (FDSE) to 'Video_Generator0/c1x_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set1x_reg[6]' (FDE) to 'Video_Generator0/set1x_reg[7]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator0/\c1x_reg[7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator0/\set1x_reg[7] )
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c1x_reg[8]' (FDRE) to 'Video_Generator0/c1x_reg[10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator0/\set1x_reg[8] )
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c1x_reg[10]' (FDRE) to 'Video_Generator0/c1x_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator0/\c1x_reg[11] )
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/a2x_reg[3]' (FDRE) to 'Video_Generator0/a2x_reg[6]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/a2x_reg[4]' (FDSE) to 'Video_Generator0/a2x_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/a2x_reg[6]' (FDRE) to 'Video_Generator0/a2x_reg[8]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/a2x_reg[7]' (FDSE) to 'Video_Generator0/a2x_reg[10]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/a2x_reg[8]' (FDRE) to 'Video_Generator0/a2x_reg[11]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator0/\a2x_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator0/\a2x_reg[11] )
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/b2x_reg[3]' (FDRE) to 'Video_Generator0/b2x_reg[6]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/b2x_reg[4]' (FDSE) to 'Video_Generator0/b2x_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/b2x_reg[6]' (FDRE) to 'Video_Generator0/b2x_reg[8]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/b2x_reg[7]' (FDSE) to 'Video_Generator0/b2x_reg[10]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/b2x_reg[8]' (FDRE) to 'Video_Generator0/b2x_reg[11]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator0/\b2x_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator0/\b2x_reg[11] )
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c2x_reg[3]' (FDRE) to 'Video_Generator0/c2x_reg[6]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set2x_reg[3]' (FDE) to 'Video_Generator0/set2x_reg[6]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c2x_reg[4]' (FDSE) to 'Video_Generator0/c2x_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set2x_reg[4]' (FDE) to 'Video_Generator0/set2x_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c2x_reg[6]' (FDRE) to 'Video_Generator0/c2x_reg[8]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set2x_reg[6]' (FDE) to 'Video_Generator0/set2x_reg[8]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c2x_reg[7]' (FDSE) to 'Video_Generator0/c2x_reg[10]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/set2x_reg[7]' (FDE) to 'Video_Generator0/set2x_reg[10]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c2x_reg[8]' (FDRE) to 'Video_Generator0/c2x_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator0/\set2x_reg[8] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator0/\c2x_reg[10] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator0/\set2x_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator0/\c2x_reg[11] )
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c_reg[17]' (FDE) to 'Video_Generator0/c_reg[32]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c_reg[18]' (FDE) to 'Video_Generator0/c_reg[32]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c_reg[19]' (FDE) to 'Video_Generator0/c_reg[32]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c_reg[20]' (FDE) to 'Video_Generator0/c_reg[32]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c_reg[21]' (FDE) to 'Video_Generator0/c_reg[32]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c_reg[22]' (FDE) to 'Video_Generator0/c_reg[32]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c_reg[23]' (FDE) to 'Video_Generator0/c_reg[32]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c_reg[24]' (FDE) to 'Video_Generator0/c_reg[32]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c_reg[25]' (FDE) to 'Video_Generator0/c_reg[32]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c_reg[26]' (FDE) to 'Video_Generator0/c_reg[32]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c_reg[27]' (FDE) to 'Video_Generator0/c_reg[32]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c_reg[28]' (FDE) to 'Video_Generator0/c_reg[32]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c_reg[29]' (FDE) to 'Video_Generator0/c_reg[32]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c_reg[30]' (FDE) to 'Video_Generator0/c_reg[32]'
+INFO: [Synth 8-3886] merging instance 'Video_Generator0/c_reg[31]' (FDE) to 'Video_Generator0/c_reg[32]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 793.539 ; gain = 473.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name     | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Video_Generator | C+A*(B:0x64) | 14     | 7      | 14     | -      | 14     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|Video_Generator | C+A*(B:0x64) | 14     | 7      | 14     | -      | 14     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
++----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_10/clk_out1' to pin 'clk_10/bbstub_clk_out1/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 827.820 ; gain = 507.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:32 ; elapsed = 00:01:37 . Memory (MB): peak = 1049.066 ; gain = 729.047
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:34 ; elapsed = 00:01:40 . Memory (MB): peak = 1050.074 ; gain = 730.055
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module clk_10 has unconnected pin reset
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:36 ; elapsed = 00:01:42 . Memory (MB): peak = 1050.074 ; gain = 730.055
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:36 ; elapsed = 00:01:42 . Memory (MB): peak = 1050.074 ; gain = 730.055
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:37 ; elapsed = 00:01:43 . Memory (MB): peak = 1050.074 ; gain = 730.055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:37 ; elapsed = 00:01:43 . Memory (MB): peak = 1050.074 ; gain = 730.055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:37 ; elapsed = 00:01:43 . Memory (MB): peak = 1050.074 ; gain = 730.055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:37 ; elapsed = 00:01:43 . Memory (MB): peak = 1050.074 ; gain = 730.055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
+|2     |rgb2dvi_0     |         1|
+|3     |game_R_Rom    |         1|
+|4     |over_R_Rom    |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |clk_wiz_0  |     1|
+|2     |game_R_Rom |     1|
+|3     |over_R_Rom |     1|
+|4     |rgb2dvi_0  |     1|
+|5     |CARRY4     |   441|
+|6     |DSP48E1    |     2|
+|7     |LUT1       |   240|
+|8     |LUT2       |   531|
+|9     |LUT3       |   442|
+|10    |LUT4       |   313|
+|11    |LUT5       |   308|
+|12    |LUT6       |   477|
+|13    |FDRE       |   358|
+|14    |FDSE       |    20|
+|15    |IBUF       |     2|
++------+-----------+------+
+
+Report Instance Areas: 
++------+-------------------+----------------+------+
+|      |Instance           |Module          |Cells |
++------+-------------------+----------------+------+
+|1     |top                |                |  3160|
+|2     |  Control          |control         |   253|
+|3     |  Driver_HDMI0     |Driver_HDMI     |   382|
+|4     |  Video_Generator0 |Video_Generator |  2072|
++------+-------------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:37 ; elapsed = 00:01:43 . Memory (MB): peak = 1050.074 ; gain = 730.055
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:23 ; elapsed = 00:01:34 . Memory (MB): peak = 1050.074 ; gain = 418.938
+Synthesis Optimization Complete : Time (s): cpu = 00:01:37 ; elapsed = 00:01:43 . Memory (MB): peak = 1050.074 ; gain = 730.055
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 443 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1050.074 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+233 Infos, 5 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:41 ; elapsed = 00:01:48 . Memory (MB): peak = 1050.074 ; gain = 742.098
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1050.074 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/summer_homework/Lab_10/Lab_10.runs/synth_1/Lab_10.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Lab_10_utilization_synth.rpt -pb Lab_10_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 30 16:23:32 2020...
